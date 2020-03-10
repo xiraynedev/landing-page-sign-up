@@ -1,0 +1,85 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro {
+  border-top: 1px solid #ccc;
+  position: relative;
+  top: 50%;
+  animation: intro 5s ease-in-out forwards;
+}
+
+.container {
+  background: url(header.jpg) no-repeat center fixed;
+  background-size: cover;
+  opacity: 0;
+  animation: reveal 2s ease-in-out 6s forwards;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e2dbdb;
+}
+
+.buffer {
+  height: 10rem;
+}
+
+hr {
+  border-width: 3px;
+  max-width: 65px;
+  border-color: #F05F44;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 300px;
+}
+
+.btn-primary {
+  background-color: #F05F44;
+  border-color: #F05F44;
+}
+
+.btn-primary:hover {
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
+
+
+@keyframes intro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(450deg);
+  }
+
+  70% {
+    transform: rotate(450deg) scaleX(100);
+  }
+
+  99% {
+    transform: rotate(450deg) scaleX(100) scaleY(1000);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reveal {
+  100% {
+    opacity: 1;
+  }
+}
